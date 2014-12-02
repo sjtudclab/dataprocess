@@ -10,12 +10,11 @@
 
   <!-- version of jars -->
   <properties>
-    <spring.version>3.2.3.RELEASE</spring.version>
+    <spring.version>3.0.2.RELEASE</spring.version>
     <hibernate.version>3.3.2.GA</hibernate.version>
     <slf4j.version>1.5.10</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
     <junit.version>4.11</junit.version>
-    <cglib.version>3.0</cglib.version>
     <velocity.version>1.7</velocity.version>
     <tiles.extras.version>3.0.1</tiles.extras.version>
     <jsonlib.version>2.4</jsonlib.version>
@@ -27,6 +26,14 @@
   <!-- end of version of jars -->
 
   <dependencies>
+
+    <dependency>
+      <groupId>xml-apis</groupId>
+      <artifactId>xml-apis</artifactId>
+      <version>1.4.01</version>
+      <scope>runtime</scope>
+    </dependency>
+
     <dependency>
       <groupId>com.sun.jersey.contribs</groupId>
       <artifactId>jersey-multipart</artifactId>
@@ -42,6 +49,12 @@
     <dependency>
       <groupId>org.apache.struts</groupId>
       <artifactId>struts2-core</artifactId>
+      <version>2.1.8</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-spring-plugin</artifactId>
       <version>2.1.8</version>
     </dependency>
 
@@ -248,11 +261,6 @@
 
     <!-- provided -->
     <dependency>
-      <groupId>taglibs</groupId>
-      <artifactId>standard</artifactId>
-      <version>1.1.2</version>
-    </dependency>
-    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
       <version>1.2</version>
@@ -266,11 +274,6 @@
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <version>2.5</version>
-    </dependency>
-    <dependency>
-      <groupId>cglib</groupId>
-      <artifactId>cglib</artifactId>
-      <version>${cglib.version}</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet.jsp</groupId>

@@ -12,7 +12,6 @@ public class StartupListener extends ContextLoaderListener implements
 		ServletContextListener {
 
 	public void contextInitialized(ServletContextEvent event) {
-
 		super.contextInitialized(event);
 
 		ServletContext context = event.getServletContext();

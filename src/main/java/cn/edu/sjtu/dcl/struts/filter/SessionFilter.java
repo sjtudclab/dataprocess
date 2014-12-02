@@ -22,7 +22,7 @@ import cn.edu.sjtu.dcl.util.ProjectConstants;
 
 
 public class SessionFilter implements Filter {
-	
+
 	private UserService userService;
 
 	public void destroy() {
@@ -62,7 +62,7 @@ public class SessionFilter implements Filter {
 							System.out.println("here before filter111");
 							chain.doFilter(request, response);
 							return;
-						} 
+						}
 					}else
 					{
 						User user = new User();
@@ -90,7 +90,7 @@ public class SessionFilter implements Filter {
 
 	public UserService getUserService() {
 		if(this.userService == null){
-			this.userService = (UserService) StartupListener.getBean("userService"); 
+			this.userService = (UserService) StartupListener.getBean("userService");
 		}
 		return userService;
 	}
